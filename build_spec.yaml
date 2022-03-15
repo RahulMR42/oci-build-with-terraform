@@ -59,6 +59,7 @@ steps:
     command: |
       cd ${OCI_PRIMARY_SOURCE_DIR}
       ls -ltr
+      unset OCI_AUTH
       terraform version
       terraform init -migrate-state
       terraform plan 
